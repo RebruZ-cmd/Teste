@@ -14,9 +14,9 @@
         </img><!-- logo da empresa -->
         <!--<h1 class='text-2xl font-bold text-indigo-600'>Autêntica Corretora de Seguros</h1> -->
             <nav class='space-x-6 text-sm font-medium'> <!-- navegação -->
-             <a href="#Inicio" class="hover:text-indigo-600 transition"> Início</a> <!-- links de navegação -->
-             <a href="#Sobre" class="hover:text-indigo-600 transition"> Sobre</a>
-             <a href="#Contato" class="hover:text-indigo-600 transition"> Contato</a>
+             <a href="#Inicio" class="hover:text-indigo-600 transition" style="font-size: 20px;"> Início</a> <!-- links de navegação -->
+             <a href="#Sobre" class="hover:text-indigo-600 transition" style="font-size: 20px"> Sobre</a>
+             <a href="#Contato" class="hover:text-indigo-600 transition" style="font-size: 20px"> Contato</a>
             </nav> <!-- fim da navegação -->
         </div> <!-- fim do container do cabeçalho -->
     </header> <!-- fim do cabeçalho -->
@@ -33,7 +33,66 @@
             <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2VndXJvfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" alt="Imagem de Seguros" class="w-full h-64 object-cover mt-8 rounded-md shadow-md">
         </div>
     </section>
+    <hr>
+        <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12"> Encontre a Solução Ideal em Seguros Para Você! </h2>
+        
+        <h3 class="text-2xl font-semibold text-gray-800 mb-8"> Nossos Principais Seguros </h3>
 
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- Veículos -->
+            <div class="bg-gray-100 rounded-xl p-6 shadow-md hover:shadow-xl transition">
+                <h3 class="text-xl font-semibold mb-4">🚗 Veículos</h3>
+                <ul class="text-gray-600 space-y-2">
+                    <li>• Carros</li>
+                    <li>• Motos</li>
+                    <li>• Caminhões</li>
+                </ul>
+                <a href="#Contato" class="mt-6 inline-block text-indigo-600 font-medium hover:underline">
+                    Solicitar cotação →
+                </a>
+            </div>
+
+            <!-- Residência -->
+            <div class="bg-gray-100 rounded-xl p-6 shadow-md hover:shadow-xl transition">
+                <h3 class="text-xl font-semibold mb-4">🏠 Residência</h3>
+                <p class="text-gray-600 mb-4">
+                    Proteção completa para sua casa e patrimônio.
+                </p>
+                <a href="#Contato" class="text-indigo-600 font-medium hover:underline">
+                    Solicitar cotação →
+                </a>
+            </div>
+
+            <!-- Vida -->
+            <div class="bg-gray-100 rounded-xl p-6 shadow-md hover:shadow-xl transition">
+                <h3 class="text-xl font-semibold mb-4">❤️ Vida</h3>
+                <p class="text-gray-600 mb-4">
+                    Segurança financeira para você e sua família.
+                </p>
+                <a href="#Contato" class="text-indigo-600 font-medium hover:underline">
+                    Solicitar cotação →
+                </a>
+            </div>
+
+            <!-- Viagem -->
+            <div class="bg-gray-100 rounded-xl p-6 shadow-md hover:shadow-xl transition">
+                <h3 class="text-xl font-semibold mb-4">✈️ Viagem</h3>
+                <p class="text-gray-600 mb-4">
+                    Tranquilidade e assistência onde você estiver.
+                </p>
+                <a href="#Contato" class="text-indigo-600 font-medium hover:underline">
+                    Solicitar cotação →
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    </hr>
     <section id="Sobre" class="py-20 bg-gray-100"> <!-- seção sobre -->
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-gray-900 mb-6">Sobre Nós</h2>
@@ -82,7 +141,7 @@
     </footer> <!-- fim do rodapé -->
     
     <a href="https://wa.me/5569981118056?text=Ol%C3%A1%2C%20eu%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20do%20meu%20ve%C3%ADculo!" target="_blank" style="position: fixed;bottom: 45px;right: 25px;z-index: 5;display: flex;box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);border-radius: 100px;">
-    <svg xmlns="http://www.w3.org/2000/svg" aria-label="WhatsApp" role="img" viewBox="0 0 512 512" fill="#000000" style="width: 50px;border-radius: 50px;">
+    <svg xmlns="http://www.w3.org/2000/svg" aria-label="WhatsApp" role="img" viewBox="0 0 512 512" fill="#000000" style="width: 65px;border-radius: 60px;">
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
         <g id="SVGRepo_iconCarrier">
@@ -94,28 +153,27 @@
 </a> <!-- botão flutuante do whatsapp --> 
 
 </body>
+<html>
+    <script>
+        (function(){
+            emailjs.init('UserId');
+        })();
+
+        const form = document.getElementById('contactForm');
+        const feedback = document.getElementById('feedback');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.sendForm('serviceId service_p3pd3ez', 'templateId', this)
+                .then(function() {
+                    alert('Mensagem enviada com sucesso!'); 
+                    form.reset();
+                }, function(error) {
+                    alert('Erro ao enviar a mensagem: ' + JSON.stringify(error));
+                });
+        });
+    </script>
 </html>
-
-<script>
-    (function(){
-        emailjs.init('UserId');
-    })();
-
-    const form = document.getElementById('contactForm');
-    const feedback = document.getElementById('feedback');
-
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        emailjs.sendForm('serviceId service_p3pd3ez', 'templateId', this)
-            .then(function() {
-                alert('Mensagem enviada com sucesso!'); 
-                form.reset();
-            }, function(error) {
-                alert('Erro ao enviar a mensagem: ' + JSON.stringify(error));
-            });
-    });
-</script>
-
-<!-- substitua 'UserId', 'serviceId' e 'templateId' pelos valores reais do EmailJS --></html>
+<!-- substitua 'UserId', 'serviceId' e 'templateId' pelos valores reais do EmailJS -->
 <!-- Login autenticacorretora senha Renzo2004 FTP autenticacorretora_admin Renzo2004-->
